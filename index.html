@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Archived conversations</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                function selectConversation(element) {
+                    if (selectedConvLi) {
+                        selectedConvLi.className = "conversations";
+                    }
+                    var href = element.getAttribute('href');
+                    selectedConversationHeader.innerHTML = element.innerHTML;
+                    selectedConversationDiv.innerHTML='<object class="object" type="text/html" data="' + href + '" ></object>';
+                    selectedConvLi = element.parentNode;
+                    selectedConvLi.className = "conversations-sel"
+                }
+                function convCallback(event) {
+                    if (event.target.tagName !== 'A') {
+                        return;
+                    }
+                    selectConversation(event.target);
+                    event.preventDefault();
+                }
+
+                var selectedConvLi = null;
+                var selectedConversationDiv = document.getElementById("selected-conversation-placeholder");
+                var selectedConversationHeader = document.getElementById("selected-conversation-header");
+                var conversations = document.getElementById('conversations');
+                conversations.addEventListener('click', convCallback, false);
+                selectConversation(conversations.firstElementChild.firstElementChild);
+            });
+        </script>
+        <div class="left">
+            <div class="header">
+                <h1 class="conversations">Archived conversations</h1>
+
+<table>
+                <tbody>
+                    <tr><th>User</th><td id="hdr-user">Toxyca <small>(toxyca.toxyca)</small></td></tr>
+                    <tr><th>Exported</th><td id="hdr-exported">3/7/2019 3:27:55 AM</td></tr>
+                    <tr><th>Total</th><td id="hdr-stats">19 conversations</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <ul class="conversations" id="conversations">
+        
+        <li class="conversations">
+            <a href="KingKAN-10784.html#end" target="selected-chat">KingKAN</a>
+            <div>
+                <span class="messageCount">4 messages</span>
+                <span class="timestamp-conv">Last from: 7/17/2018 5:06:58 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Jessica-Showers-1861.html#end" target="selected-chat">Jessica Showers</a>
+            <div>
+                <span class="messageCount">44 messages</span>
+                <span class="timestamp-conv">Last from: 5/13/2018 11:49:42 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Sela--Talk-more--143602.html#end" target="selected-chat">Sela. Talk more.</a>
+            <div>
+                <span class="messageCount">121398 messages</span>
+                <span class="timestamp-conv">Last from: 5/9/2018 5:19:36 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Skype-129154.html#end" target="selected-chat">Skype</a>
+            <div>
+                <span class="messageCount">6 messages</span>
+                <span class="timestamp-conv">Last from: 4/27/2018 9:03:14 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="MrMe1003-268519.html#end" target="selected-chat">MrMe1003</a>
+            <div>
+                <span class="messageCount">2 messages</span>
+                <span class="timestamp-conv">Last from: 2/22/2018 8:17:25 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Justin-Knowles-10272.html#end" target="selected-chat">Justin Knowles</a>
+            <div>
+                <span class="messageCount">385 messages</span>
+                <span class="timestamp-conv">Last from: 2/12/2018 10:13:40 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="James-Something-7697.html#end" target="selected-chat">James Something</a>
+            <div>
+                <span class="messageCount">113 messages</span>
+                <span class="timestamp-conv">Last from: 1/10/2018 3:02:27 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Emma-Lindstrom-2160.html#end" target="selected-chat">Emma Lindstrom</a>
+            <div>
+                <span class="messageCount">6 messages</span>
+                <span class="timestamp-conv">Last from: 12/5/2017 3:47:10 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Undead_Sparkz-755.html#end" target="selected-chat">Undead_Sparkz</a>
+            <div>
+                <span class="messageCount">493 messages</span>
+                <span class="timestamp-conv">Last from: 11/22/2017 8:56:42 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="--B-r-o-c-k---774.html#end" target="selected-chat">♚ B r o c k ♚</a>
+            <div>
+                <span class="messageCount">58 messages</span>
+                <span class="timestamp-conv">Last from: 11/21/2017 11:59:59 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="one-million-various-bees--Fawl--145219.html#end" target="selected-chat">one million various bees (Fawl)</a>
+            <div>
+                <span class="messageCount">45 messages</span>
+                <span class="timestamp-conv">Last from: 11/21/2017 12:34:08 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Queen-Oli-The-First-765.html#end" target="selected-chat">Queen Oli The First</a>
+            <div>
+                <span class="messageCount">668 messages</span>
+                <span class="timestamp-conv">Last from: 11/6/2017 10:50:15 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Selathiel-_--9560.html#end" target="selected-chat">Selathiel^_~</a>
+            <div>
+                <span class="messageCount">41 messages</span>
+                <span class="timestamp-conv">Last from: 11/6/2017 9:56:06 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Christian-Coker-545.html#end" target="selected-chat">Christian Coker</a>
+            <div>
+                <span class="messageCount">103 messages</span>
+                <span class="timestamp-conv">Last from: 9/20/2017 11:42:18 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Dylan-Chambers-1909.html#end" target="selected-chat">Dylan Chambers</a>
+            <div>
+                <span class="messageCount">209 messages</span>
+                <span class="timestamp-conv">Last from: 8/12/2017 3:43:57 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="meloney-1843.html#end" target="selected-chat">meloney</a>
+            <div>
+                <span class="messageCount">38 messages</span>
+                <span class="timestamp-conv">Last from: 8/11/2017 12:21:51 PM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="----Chase--6678.html#end" target="selected-chat">민겨 (Chase)</a>
+            <div>
+                <span class="messageCount">1 message</span>
+                <span class="timestamp-conv">Last from: 8/10/2017 4:43:33 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="Suicidal-Kommando-186183.html#end" target="selected-chat">Suicidal Kommando</a>
+            <div>
+                <span class="messageCount">1 message</span>
+                <span class="timestamp-conv">Last from: 7/17/2017 1:44:14 AM</span>
+            </div>
+        </li>
+
+        <li class="conversations">
+            <a href="The-Shadow-of-YJF-105820.html#end" target="selected-chat">The Shadow of YJF</a>
+            <div>
+                <span class="messageCount">1 message</span>
+                <span class="timestamp-conv">Last from: 6/5/2017 2:39:22 AM</span>
+            </div>
+        </li>
+
+        </ul>
+        </div>
+        <div id="selected-conversation" class="right" >
+            <h1 class="conversation" id="selected-conversation-header"></h1>
+            <div id="selected-conversation-placeholder">
+            </div>
+        </div>
+    </body>
+</html>
